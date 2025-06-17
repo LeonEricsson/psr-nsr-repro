@@ -1526,12 +1526,13 @@ wheels = [
 [[package]]
 name = "psr-nsr-repro"
 version = "0.1.0"
-source = { virtual = "." }
+source = { editable = "." }
 dependencies = [
     { name = "fire" },
     { name = "flash-attn", marker = "sys_platform != 'darwin'" },
     { name = "latex2sympy2" },
     { name = "tensordict" },
+    { name = "torch" },
     { name = "vllm" },
 ]
 
@@ -1541,6 +1542,7 @@ requires-dist = [
     { name = "flash-attn", marker = "sys_platform != 'darwin'" },
     { name = "latex2sympy2", specifier = ">=1.9.1" },
     { name = "tensordict", specifier = "==0.7.2" },
+    { name = "torch", specifier = ">=2.6.0" },
     { name = "vllm", specifier = "==0.8.2" },
 ]
 
