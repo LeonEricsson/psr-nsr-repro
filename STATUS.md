@@ -28,3 +28,8 @@ The work asks how *positive* versus *negative* reward signals drive learning in 
 | **Regularisation parity**  | Train a DAPO inspired baseline; No KL penalty, Clip-higher.                           | Apples-to-apples curves isolating the effect of + / – updates.       |
 | **OOD generalisation**     | Re-use optimiser grid on **Reasoning Gym** and **LiveCodeBench**.                     | Evidence whether conclusions hold beyond math verification.          |
 
+Alternative models to look at:
+
+meta-llama/Llama-3.2-3B-Instruct
+allenai/OLMo-2-0425-1B-Instruct
+allenai/OLMo-2-1124-7B-Instruct
