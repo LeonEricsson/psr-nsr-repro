@@ -14,3 +14,7 @@ dependencies = [
 
 [tool.uv]
 no-build-isolation-package = ["flash-attn"]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
