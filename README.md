@@ -1,13 +1,6 @@
-<div align="center">
+reproduction and further explorations based on *The Surprising Effectiveness of Negative Reinforcement in LLM Reasoning*. Code is implemented based on [their repo](https://github.com/TianHongZXY/RLVR-Decomposed). Below is the original README.
 
-# The Surprising Effectiveness of Negative Reinforcement in LLM Reasoning
 
-[![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2506.01347)[![Hugging Face](https://img.shields.io/badge/RLVR_Decomposed-fcd022?style=for-the-badge&logo=Huggingface&logoColor=000)](https://huggingface.co/collections/TianHongZXY/rlvr-decomposed-683c0cd7151b769d8ea5915c)
-
-</div>
-
-## News
-- **[2025/06/01]** We release our [paper](https://arxiv.org/pdf/2506.01347) and code. 🚀
 ## Quick Start
 ### Installation
 Our code is implemented based on [verl](https://github.com/volcengine/verl). We recommend to use docker image provided by verl, please refer to their [documents](https://verl.readthedocs.io/en/v0.2.x/start/install.html).
