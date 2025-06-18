@@ -17,7 +17,7 @@ model_name=Qwen/Qwen2.5-Math-7B
 
 python3 -m verl.trainer.main_ppo \
     algorithm.adv_estimator=psr_nsr \
-    algorithm.advantage=$advantage \
+    algorithm.decomposed=$advantage \
     data.train_files="$train_files" \
     data.val_files="$test_files" \
     data.train_batch_size=1024 \
