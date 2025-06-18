@@ -13,7 +13,9 @@ advantage="positive"   # PSR
 # positive_advantage_weight=0.1   # For W-REINFORCE only
 kl_coef=0.0
 lr=1e-6
+experiment_name="MATH-Qwen2.5-Math-7B"
 model_name=Qwen/Qwen2.5-Math-7B
+
 
 python3 -m verl.trainer.main_ppo \
     algorithm.adv_estimator=psr_nsr \
@@ -43,10 +45,10 @@ python3 -m verl.trainer.main_ppo \
     actor_rollout_ref.rollout.gpu_memory_utilization=0.7 \
     actor_rollout_ref.rollout.n=8 \
     actor_rollout_ref.ref.fsdp_config.param_offload=True \
-    trainer.experiment_name="MATH-Qwen2.5-Math-7B-$advantage" \
+    trainer.experiment_name="$experiment_name-$advantage" \
     algorithm.kl_ctrl.kl_coef=$kl_coef \
     trainer.critic_warmup=0 \
-    trainer.logger=['wandb'] \
+    trainer.logger=['console', 'wandb'] \
     trainer.project_name='verl' \
     trainer.n_gpus_per_node=8 \
     +trainer.val_before_train=True \

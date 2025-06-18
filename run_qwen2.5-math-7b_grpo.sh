@@ -9,6 +9,7 @@ train_files="['$math_train_path']"
 test_files="['$math_test_path', '$aime2025_test_path', '$amc23_test_path']"
 kl_coef=0.001
 lr=1e-6
+experiment_name="MATH-Qwen2.5-Math-7B-GRPO"
 model_name=Qwen/Qwen2.5-Math-7B
 
 python3 -m verl.trainer.main_ppo \
@@ -32,6 +33,7 @@ python3 -m verl.trainer.main_ppo \
     actor_rollout_ref.actor.use_kl_loss=True \
     actor_rollout_ref.actor.kl_loss_coef=$kl_coef \
     actor_rollout_ref.actor.kl_loss_type=low_var_kl \
+    actor_rollout_ref.actor.entropy_coeff=0 \
     actor_rollout_ref.actor.fsdp_config.param_offload=False \
     actor_rollout_ref.actor.fsdp_config.optimizer_offload=False \
     actor_rollout_ref.rollout.enforce_eager=False \
@@ -41,9 +43,10 @@ python3 -m verl.trainer.main_ppo \
     actor_rollout_ref.rollout.gpu_memory_utilization=0.7 \
     actor_rollout_ref.rollout.n=8 \
     actor_rollout_ref.ref.fsdp_config.param_offload=True \
-    trainer.experiment_name="MATH-Qwen2.5-Math-7B-GRPO" \
+    algorithm.use_kl_in_reward=False \
+    trainer.experiment_name="$experiment_name" \
     trainer.critic_warmup=0 \
-    trainer.logger=['wandb'] \
+    trainer.logger=['console','wandb'] \
     trainer.project_name='verl' \
     trainer.n_gpus_per_node=8 \
     +trainer.val_before_train=True \
