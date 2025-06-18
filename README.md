@@ -30,6 +30,24 @@ GRPO
 bash run_qwen2.5-math-7b_grpo.sh
 ```
 
+Additional bash scripts are provided to reproduce the results on smaller model
+variants. The following scripts mirror the commands above but swap in the
+alternative checkpoints listed in `STATUS.md`:
+
+```
+bash run_llama-3b_psr_nsr.sh   # PSR/NSR/W-REINFORCE with Llama 3B
+bash run_llama-3b_ppo.sh       # PPO baseline for Llama 3B
+bash run_llama-3b_grpo.sh      # GRPO baseline for Llama 3B
+
+bash run_olmo-1b_psr_nsr.sh    # PSR/NSR/W-REINFORCE with OLMo 1B
+bash run_olmo-1b_ppo.sh        # PPO baseline for OLMo 1B
+bash run_olmo-1b_grpo.sh       # GRPO baseline for OLMo 1B
+
+bash run_olmo-7b_psr_nsr.sh    # PSR/NSR/W-REINFORCE with OLMo 7B
+bash run_olmo-7b_ppo.sh        # PPO baseline for OLMo 7B
+bash run_olmo-7b_grpo.sh       # GRPO baseline for OLMo 7B
+```
+
 ## Evaluation
 Specify `MODEL_PATH` and `OUTPUT_DIR` in `eval.sh`, then `bash eval.sh`.
 
