@@ -5,12 +5,10 @@ This Agents.md file provides comprehensive guidance for OpenAI Codex and other A
 ## Project Structure for OpenAI Codex Navigation
 This repository is built entirely on [verl: Volcano Engine Reinforcement Learning for LLMs](https://github.com/volcengine/verl). 
 
-- 
-
 - `/verl`: Source code from the verl repository containing everything pertaining to training (models, RL algorithms, ...).
 - `/data`: Data to use for experiments
 - `/examples`: Example run bash scrips, data preprocessing, ...
-
+- `/recipe`: Implementations of new RL algorithms such as PRIME, DAPO, SPIN, ...
 
 ## Coding Conventions for OpenAI Codex
 
